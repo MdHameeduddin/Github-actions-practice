@@ -1,0 +1,14 @@
+name: Employee Management CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Access Database Password
+        env:
+          DATABASE_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: echo "Database password is configured"
