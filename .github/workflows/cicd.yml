@@ -20,7 +20,7 @@ jobs:
           - name: test application
             run: echo "Perform Unit and integration testing"
     deploy:
-        needs: [build,test]
+        needs: [test]
         runs-on: ubuntu-latest
         steps:
           - name: Deploy the application
