@@ -5,5 +5,10 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: List Files
+        run: ls
       - name: Print Message
-        run: echo "Hello Everyone"
+        run: echo "Hello Everyone!!!"
+        
