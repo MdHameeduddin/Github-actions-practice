@@ -1,0 +1,11 @@
+name: Employee Management CI
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Access Database password
+        env:
+          DATABASE_PWD: ${{secrets.DB_PASSWORD}}
+        run: echo "Database Pwd is configured"
