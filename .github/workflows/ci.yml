@@ -31,8 +31,10 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:
-          push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/github-actions-practice:latest
+            context: .
+            file: ./Dockerfile
+            push: true
+            tags: mdhameeduddin/github-actions-practice:latest
           
 
         
