@@ -1,6 +1,4 @@
 from flask import Flask, jsonify
-# Flask Application for Employees
-# Falsk App
 app = Flask(__name__)
 
 employees = [
@@ -8,7 +6,7 @@ employees = [
     {"id": 2, "name": "Yahya", "role": "Python Developer"},
     {"id": 3, "name": "Tameem", "role": "Software Engineer"}
 ]
-
+name = "Md"
 
 @app.route("/")
 def home():
