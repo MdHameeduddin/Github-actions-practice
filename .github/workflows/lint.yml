@@ -2,9 +2,7 @@ name: Linting
 
 on:
   push:
-    paths:
-      - '**.py'
-  workflow_dispatch:
+    paths: "*.py"
 
 jobs:
   code:
