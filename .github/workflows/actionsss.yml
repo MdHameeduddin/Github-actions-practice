@@ -10,4 +10,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: List Github Repository
-        run: ls-la
+        run: ls-ltr
