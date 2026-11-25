@@ -1,18 +1,26 @@
-name: Linting 
+name: Linting
+
 on:
   push:
-    paths: "*.py"
+    paths:
+      - '**.py'
+  workflow_dispatch:
+
 jobs:
   code:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Install Lint
         run: pip install ruff
-        
+
       - name: Check Linter
         run: ruff check .
-        
-  
