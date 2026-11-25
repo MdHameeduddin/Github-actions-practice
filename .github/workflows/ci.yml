@@ -31,10 +31,10 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v7
         with:
-            context: .
-            file: ./Dockerfile
-            push: true
-            tags: mdhameeduddin/github-actions-practice:latest
+          context: ./.github/workflows
+          file: ./.github/workflows/Dockerfile
+          push: true
+          tags: mdhameeduddin/github-actions-practice:latest
           
 
         
