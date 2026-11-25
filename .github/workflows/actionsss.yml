@@ -1,0 +1,13 @@
+name: Employee Management CI
+on:
+  workflow_dispatch
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: action/checkout@v4
+
+      - name: List Github Repository
+        run: ls-ls
